@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using Blog2.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Blog2.DAL
 {
@@ -14,7 +15,7 @@ namespace Blog2.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvection>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }
